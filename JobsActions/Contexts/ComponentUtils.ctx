@@ -1,0 +1,81 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: ComponentUtils
+Element-Type: context
+Element-Version: 2.0
+Id: _kqDqoNMZEeSMFbbQwNwhHg
+Runtime-Version: 1.5.5.201503020312
+Save-Time: 3/26/15 3:06 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Contains different common procedures used in Tests related to jobs
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+//Procedure for selecting a component [component] and putting it on the job designer on certain coordinates [x] [y]
+proc "put-component" [val component] [val x] [val y] {
+    with [get-view Palette | get-palette | get-palette-entry $component] {
+    mouse-move 38 17 button1 -height 23 -width 131
+    mouse-press 38 17 button1 -height 23 -width 131
+    mouse-release 38 17 button1 524288 -height 23 -width 131    
+	}
+	with [get-editor "Job TestJob 0.1"] {
+	    with [get-diagram | get-figure "0/0/0"] {
+	        mouse-press $x $y button1 -height 434 -width 1471
+	    }
+	}	
+}
+
+//Procedure for executing a job
+proc "run-job" {
+	get-view "Run (Job TestJob)" | get-group Execution | get-button Run | click
+}
+
+//Procedure for linking 2 components with a Main row
+proc "link-by-main-row" {
+	with [get-editor "Job TestJob 0.1"] {
+	    with [get-diagram] {
+	        with [get-edit-part -className ProcessPart | get-edit-part -className SubjobContainerPart | get-edit-part 
+	            -className NodeContainerPart | get-edit-part -className NodePart] {
+	            mouse-move 13 14 button3 -height 32 -width 32
+	            mouse-press 13 14 button3 -height 32 -width 32
+	            mouse-release 13 14 button3 2097152 -height 32 -width 32
+	        }
+	        get-menu "Row/Main" | click
+	
+	    }
+	 }
+	
+	with [get-editor "Job TestJob 0.1" | get-diagram | get-edit-part -className ProcessPart | get-edit-part 
+	    -className SubjobContainerPart -index 1 | get-edit-part -className NodeContainerPart | get-edit-part 
+	    -className NodePart] {
+	    mouse-move 13 10 button1 -height 32 -width 32
+	    mouse-press 13 10 button1 -height 32 -width 32
+	    mouse-release 13 10 button1 524288 -height 32 -width 32
+	    mouse-hover 13 10 -height 32 -width 32
+	}
+}
+
+//Procedure for configuring a tRowGenerator with one default column
+proc "trowgenerator-simple-configuration" {
+	with [get-editor "Job TestJob 0.1" | get-diagram | get-edit-part -className ProcessPart | get-edit-part 
+    -className SubjobContainerPart | get-edit-part -className NodeContainerPart | get-edit-part -className NodePart] {
+    mouse-move 11 10 button1 -height 32 -width 32
+    mouse-press 11 10 button1 -height 32 -width 32
+    mouse-release 11 10 button1 524288 -height 32 -width 32
+    mouse-press 11 10 button1 -height 32 -width 32
+    mouse-double-click 11 10 button1 -height 32 -width 32
+	}
+	with [get-window "Talend Open Studio for Data Integration - tRowGenerator - tRowGenerator_1"] {
+	    get-button Add | click
+	    get-button OK | click
+	}
+	get-window Propagate | get-button Yes | click
+}
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

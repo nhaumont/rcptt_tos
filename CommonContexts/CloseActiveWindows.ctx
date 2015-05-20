@@ -1,0 +1,27 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.workbench
+Element-Name: CloseActiveWindows
+Element-Type: context
+Element-Version: 2.0
+Id: _kLtykNI5EeSSuNc6vS1mbw
+Runtime-Version: 1.5.5.201503020312
+Save-Time: 3/26/15 3:01 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Close all active windows
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf
+Content-Type: q7/binary
+Entry-Name: .q7.content
+
+UEsDBBQACAgIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnR1j0FrAjEQhe9C/0OYe5MqtMhiKkU8
+CK2XPehNNDtdw24ySzJu1n9vFNab13nv+x6zWA6uFT2GaMlrmMoPEOgNVdbXGi78/z6H5ffbZEGhlmha
+20WUwXTMMhr0x2Cp2FFoThk6r8gzDiwGZ4uncnZX5hEfi3zXcGbuCqVSSpJcLbNX7f82Y+X1zJMc4zv5
+qChHFbZqLGaeAoLwR4caVi1F/DFse9xZX1GKIGyl4dD88rXZbj7XWJaXrfnqy6k7JVD52RtQSwcIUoNT
+/sMAAAAVAQAAUEsBAhQAFAAICAgAAAAhAFKDU/7DAAAAFQEAAAgAAAAAAAAAAAAAAAAAAAAAAC5jb250
+ZW50UEsFBgAAAAABAAEANgAAAPkAAAAAAA==
+------=_.q7.content-3d2e0690-ce48-3609-83e0-c704d49f1eaf--

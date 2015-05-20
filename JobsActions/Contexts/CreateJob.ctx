@@ -1,0 +1,28 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: CreateJob
+Element-Type: context
+Element-Version: 2.0
+Id: _ih1AMNLUEeSMFbbQwNwhHg
+Runtime-Version: 1.5.5.201503020312
+Save-Time: 3/26/15 3:06 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Common context containg code for creating a job
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+//Code for creating a job
+get-view Repository | get-tree | select "Job Designs" | get-menu "Create job" | click
+with [get-window "New Job"] {
+    get-editbox -after [get-label Name] | set-text TestJob
+    get-button Finish | click
+}
+get-tab-folder -index 1 | get-property "pages[0]" | equals "Job TestJob 0.1" | verify-true
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

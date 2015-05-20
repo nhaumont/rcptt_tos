@@ -1,0 +1,27 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _ih1AMNLUEeSMFbbQwNwhHg,_kqDqoNMZEeSMFbbQwNwhHg
+Element-Name: SimpleJobExecutionTest
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _iOqUINL2EeSMFbbQwNwhHg
+Runtime-Version: 1.5.5.201503020312
+Save-Time: 3/25/15 7:06 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+//Use the proc named put-component in the ComponentUtils context
+with [get-editor "Job TestJob 0.1"] {
+	put-component "tRowGenerator" "275" "150"
+	put-component "tLogRow" "500" "150"
+}
+
+link-by-main-row
+trowgenerator-simple-configuration
+run-job
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

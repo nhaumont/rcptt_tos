@@ -1,0 +1,27 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.parameters
+Element-Name: JobCreationParameters
+Element-Type: context
+Element-Version: 2.0
+Id: _WD34cNLZEeSMFbbQwNwhHg
+Runtime-Version: 1.5.5.201503020312
+Save-Time: 3/26/15 3:04 PM
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Define some variables used for the different jobs related tests
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
+Content-Type: text/properties
+Entry-Name: .parameters.context
+
+#Thu Mar 26 15:04:12 CET 2015
+jobnametest_short=mysecondjob
+job_for_tests=TestJob
+jobdesigns=Job Designs
+jobnametest=mysecondjob 0.1
+
+------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--
