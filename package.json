@@ -1,0 +1,18 @@
+{
+  "name": "rcptt_tos",
+  "version": "v0.0.5",
+  "description": "RCPTT TOS",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhaumont/rcptt_tos.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "semantic-release": "^18.0.0"
+  }
+}
